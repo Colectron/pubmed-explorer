@@ -1,0 +1,39 @@
+# --- Environnement R ---
+.Renviron
+*.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# --- Maintenance projet ---
+docs/
+
+# --- renv ---
+renv/library/
+renv/staging/
+renv/sandbox/
+# NB : renv.lock EST commité (reproductibilité)
+
+# --- Données ---
+data/
+*.rds
+*.rda
+*.csv
+*.xlsx
+
+# --- Sandbox / tests locaux ---
+sandbox/
+
+# --- Secrets ---
+**/*secret*
+**/*credentials*
+**/*api_key*
+config.yml   # si tu utilises le package config un jour
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Aider ---
+.aider*
+.Rproj.user

@@ -1,0 +1,28 @@
+Package: pubmedexplorer
+Title: PubMed Explorer - Bibliometric Visualization App
+Version: 0.0.1
+Authors@R: 
+    person("Alexandre", "Sta", 
+           role = c("aut", "cre"),
+           email = "not aviable",
+           comment = c(ORCID = "0000-0000-0000-0000"))
+Description: Shiny application for querying and visualizing bibliometric 
+    metadata from PubMed. Supports author-level and team-level searches,
+    collaboration network visualization, and publication metrics.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.0.0
+Imports:
+    shiny,
+    bslib,
+    rentrez,
+    xml2,
+    dplyr,
+    tidyr,
+    stringr,
+    igraph,
+    visNetwork,
+    plotly,
+    DT,
+    purrr
