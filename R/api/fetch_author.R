@@ -6,6 +6,7 @@
 #' @param last_name  character. Author's last name.
 #' @param first_name character. Author's first name.
 #' @param max_results integer. Maximum number of works to retrieve (default: 200).
+#' @param verbose    logical. If TRUE, display a message with the author query (default: FALSE).
 #'
 #' @return A data.frame of publications (empty skeleton for now).
 #'   If multiple author candidates are found, returns a data.frame of
@@ -17,8 +18,9 @@
 #' @examples
 #' \dontrun{
 #'   works <- fetch_author("Gorwood", "Philip")
+#'   works <- fetch_author("Gorwood", "Philip", verbose = TRUE)
 #' }
-fetch_author <- function(last_name, first_name, max_results = 200) {
+fetch_author <- function(last_name, first_name, max_results = 200, verbose = FALSE) {
   
   # --- Input validation -------------------------------------------------------
   stopifnot(
@@ -41,6 +43,10 @@ fetch_author <- function(last_name, first_name, max_results = 200) {
     cited_by_count = integer(),
     authorships    = list()    # list-column : unnested downstream
   )
+  
+  if (verbose) {
+    message("Searching for author: ", author_query)
+  }
   
   message(
     "fetch_author() called for: ", author_query, "\n",
