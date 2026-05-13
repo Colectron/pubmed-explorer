@@ -5,9 +5,6 @@
 .RData
 .Ruserdata
 
-# --- Maintenance projet ---
-docs/
-
 # --- renv ---
 renv/library/
 renv/staging/
@@ -20,6 +17,13 @@ data/
 *.rda
 *.csv
 *.xlsx
+
+
+# --- Divers ---
+*~
+
+# --- Suivi projet ---
+docs/
 
 # --- Sandbox / tests locaux ---
 sandbox/
